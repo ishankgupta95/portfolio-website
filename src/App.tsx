@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Projects from './Projects';
 import Experience from './Experience';
+import Skills from './Skills';
 import Footer from './Footer';
 import './index.css';
 
@@ -36,6 +37,7 @@ const App: React.FC = () => {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <Skills />
         <Experience />
         <Projects />
       </main>
