@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="hero-image-container">
           {/* Make sure to place your image at `public/assets/profile-picture.png` */}
-          <img src="/assets/profile-picture.jpg" alt="Ishank Gupta" className="hero-image" />
+          <img src={`${import.meta.env.BASE_URL}assets/profile-picture.jpg`} alt="Ishank Gupta" className="hero-image" />
         </div>
       </div>
     </section>
