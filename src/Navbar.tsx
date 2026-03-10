@@ -28,11 +28,11 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
         </div>
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-          <a href="#projects" style={{ fontWeight: 500, color: 'var(--text-secondary)', padding: '0.5rem' }}>Work</a>
-          <a href="#experience" style={{ fontWeight: 500, color: 'var(--text-secondary)', padding: '0.5rem' }}>Experience</a>
-          <a href="mailto:ishank1995@gmail.com" style={{ fontWeight: 500, color: 'var(--text-secondary)', padding: '0.5rem' }}>Contact</a>
+          <a href="#projects" className="nav-link">Work</a>
+          <a href="#experience" className="nav-link">Experience</a>
+          <a href="mailto:ishank1995@gmail.com" className="nav-link">Contact</a>
 
-          <button 
+          <button
             onClick={toggleTheme}
             style={{
               background: 'transparent',
