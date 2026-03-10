@@ -68,34 +68,25 @@ const experiences = [
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" style={{ padding: '5rem 0' }}>
+    <section id="experience" className="experience-section">
       <div className="container">
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '3rem', letterSpacing: '-0.02em' }}>Experience</h2>
-        <div style={{ position: 'relative' }}>
+        <h2 className="experience-heading">Experience</h2>
+        <div>
           {experiences.map((exp, index) => (
-            <div key={index} style={{ display: 'flex', gap: '2rem', marginBottom: '3rem' }}>
-              <div style={{ flexShrink: 0, width: '150px', textAlign: 'right' }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 600 }}>{exp.company}</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{exp.duration}</p>
+            <div key={index} className="experience-row">
+              <div className="experience-company">
+                <h3 className="experience-company-name">{exp.company}</h3>
+                <p className="experience-duration">{exp.duration}</p>
               </div>
-              <div style={{ borderLeft: '2px solid var(--border-color)', paddingLeft: '2rem', flexGrow: 1 }}>
+              <div className="experience-roles">
                 {exp.roles.map((role, roleIndex) => (
-                  <div key={roleIndex} style={{ marginBottom: roleIndex === exp.roles.length - 1 ? 0 : '2rem' }}>
-                    <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.25rem' }}>{role.title}</h4>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1rem' }}>{role.date}</p>
+                  <div key={roleIndex} className={roleIndex === exp.roles.length - 1 ? '' : 'experience-role'}>
+                    <h4 className="experience-role-title">{role.title}</h4>
+                    <p className="experience-role-date">{role.date}</p>
                     {role.skills.length > 0 && (
-                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                      <div className="experience-skills">
                         {role.skills.map(skill => (
-                          <span key={skill} style={{
-                            fontSize: '0.75rem',
-                            padding: '0.25rem 0.85rem',
-                            borderRadius: '9999px',
-                            backgroundColor: 'rgba(125, 125, 125, 0.1)',
-                            color: 'var(--text-color)',
-                            fontWeight: 500
-                          }}>
-                            {skill}
-                          </span>
+                          <span key={skill} className="experience-skill">{skill}</span>
                         ))}
                       </div>
                     )}

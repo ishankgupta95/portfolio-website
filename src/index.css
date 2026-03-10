@@ -306,3 +306,99 @@ button {
     gap: 1.5rem;
   }
 }
+
+/* Experience Section */
+.experience-section {
+  padding: 5rem 0;
+}
+
+.experience-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.experience-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.experience-company {
+  flex-shrink: 0;
+  width: 150px;
+  text-align: right;
+}
+
+.experience-company-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.experience-duration {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.experience-roles {
+  border-left: 2px solid var(--border-color);
+  padding-left: 2rem;
+  flex-grow: 1;
+}
+
+.experience-role {
+  margin-bottom: 2rem;
+}
+
+.experience-role-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.experience-role-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+}
+
+.experience-skills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.experience-skill {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  background-color: rgba(125, 125, 125, 0.1);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .experience-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .experience-company {
+    width: auto;
+    text-align: left;
+  }
+
+  .experience-roles {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .experience-role-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+}
