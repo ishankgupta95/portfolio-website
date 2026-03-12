@@ -13,7 +13,7 @@ export const Projects = () => {
   return (
     <section id="projects" style={{ padding: '5rem 0' }}>
       <div className="container">
-        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '3rem', letterSpacing: '-0.02em' }}>Selected Work</h2>
+        <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '3rem', letterSpacing: '-0.02em' }}>Projects</h2>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
