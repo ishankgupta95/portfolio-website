@@ -6,11 +6,11 @@ const Hero: React.FC = () => {
       <div className="container hero-container animate-fade-in">
         <div className="hero-text">
           <div className="hero-title-container">
-            <h1 className="hero-title">FRONTEND</h1>
-            <h1 className="hero-title hero-title-gradient">DEVELOPER</h1>
+            <h1 className="hero-title">SOFTWARE</h1>
+            <h1 className="hero-title hero-title-gradient">ENGINEER</h1>
           </div>
           <p className="hero-description">
-            Hi! I'm Ishank. A creative Frontend Developer with 7+ years of experience in building high-performance, scalable, and responsive web solutions.
+            Hi! I'm Ishank. A Software Engineer with 7+ years of experience in building high-performance, scalable, and responsive web solutions.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
             <a href="#projects" className="btn btn-primary">View Work</a>
