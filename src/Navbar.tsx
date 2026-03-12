@@ -1,11 +1,9 @@
-import React from 'react';
-
 interface NavbarProps {
   theme: 'light' | 'dark';
   toggleTheme: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
+export const  Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   return (
     <nav style={{
       position: 'sticky',
@@ -17,16 +15,16 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
       borderBottom: '1px solid var(--border-color)',
       transition: 'background-color 0.3s ease'
     }}>
-      <div className="container" style={{ 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center', 
-        height: '5rem' 
+      <div className="container" style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        height: '5rem'
       }}>
         <div style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.025em' }}>
           ishank<span style={{ color: 'var(--primary-color)' }}>.dev</span>
         </div>
-        
+
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <a href="#projects" className="nav-link">Work</a>
           <a href="#experience" className="nav-link">Experience</a>
@@ -51,6 +49,4 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

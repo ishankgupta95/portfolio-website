@@ -1,5 +1,3 @@
-import React from 'react';
-
 const links = [
   { label: 'GitHub', href: 'https://github.com/ishankgupta95', external: true },
   { label: 'X', href: 'https://x.com/ishank1510', external: true },
@@ -8,7 +6,7 @@ const links = [
   { label: 'Resume', href: 'https://rxresu.me/ishank1995/ishank-gupta', external: true },
 ];
 
-const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <footer style={{ padding: '4rem 0', borderTop: '1px solid var(--border-color)', marginTop: 'auto', backgroundColor: 'var(--bg-color)' }}>
       <div className="container" style={{ textAlign: 'center' }}>
@@ -30,6 +28,4 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const experiences = [
   {
     company: 'Just Appraised',
@@ -66,7 +64,7 @@ const experiences = [
   },
 ];
 
-const Experience: React.FC = () => {
+export const Experience = () => {
   return (
     <section id="experience" className="experience-section">
       <div className="container">
@@ -99,6 +97,4 @@ const Experience: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Experience;
+}

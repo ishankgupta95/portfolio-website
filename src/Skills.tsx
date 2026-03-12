@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import {
   SiJavascript,
   SiTypescript,
@@ -21,7 +21,7 @@ import { TbBrandReactNative, TbAtom2 } from 'react-icons/tb';
 
 type Skill = {
   name: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 };
 
 const stack: { category: string; skills: Skill[] }[] = [
@@ -66,7 +66,7 @@ const stack: { category: string; skills: Skill[] }[] = [
   },
 ];
 
-const Skills: React.FC = () => {
+export const Skills = () => {
   return (
     <section id="skills" className="skills-section">
       <div className="container">
@@ -89,6 +89,4 @@ const Skills: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Skills;
+}

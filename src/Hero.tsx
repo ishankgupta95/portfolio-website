@@ -1,13 +1,27 @@
-import React from 'react';
+import type { CSSProperties } from 'react';
 
-const Hero: React.FC = () => {
+const AnimatedTitle = ({ text, gradient }: { text: string; gradient?: boolean }) => (
+  <h1 className="hero-title">
+    {text.split('').map((char, i) => (
+      <span
+        key={i}
+        className={`hero-letter${gradient ? ' hero-letter-gradient' : ''}`}
+        style={{ '--i': i } as CSSProperties}
+      >
+        {char}
+      </span>
+    ))}
+  </h1>
+);
+
+export const Hero = () => {
   return (
     <section className="hero-section">
       <div className="container hero-container animate-fade-in">
         <div className="hero-text">
           <div className="hero-title-container">
-            <h1 className="hero-title">SOFTWARE</h1>
-            <h1 className="hero-title hero-title-gradient">ENGINEER</h1>
+            <AnimatedTitle text="SOFTWARE" />
+            <AnimatedTitle text="ENGINEER" gradient />
           </div>
           <p className="hero-description">
             Hi! I'm Ishank. A Software Engineer with 7+ years of experience in building high-performance, scalable, and responsive web solutions.
@@ -18,12 +32,9 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="hero-image-container">
-          {/* Make sure to place your image at `public/assets/profile-picture.png` */}
           <img src={`${import.meta.env.BASE_URL}assets/profile-picture.jpg`} alt="Ishank Gupta" className="hero-image" />
         </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

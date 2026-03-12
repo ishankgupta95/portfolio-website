@@ -1,20 +1,18 @@
-import React from 'react';
-
 const projects = [
   { id: 1, title: 'E-Commerce Dashboard', description: 'A modern dashboard for managing products and orders.', tags: ['React', 'TypeScript', 'Tailwind'] },
   { id: 2, title: 'Task Management App', description: 'Collaborative tool for teams to track progress.', tags: ['Next.js', 'Prisma', 'PostgreSQL'] },
   { id: 3, title: 'AI Image Generator', description: 'Generate images from text prompts using AI.', tags: ['Python', 'OpenAI API', 'React'] },
 ];
 
-const Projects: React.FC = () => {
+export const Projects = () => {
   return (
     <section id="projects" style={{ padding: '5rem 0' }}>
       <div className="container">
         <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '3rem', letterSpacing: '-0.02em' }}>Selected Work</h2>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '2.5rem' 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2.5rem'
         }}>
           {projects.map((project) => (
             <div key={project.id} style={{
@@ -57,6 +55,4 @@ const Projects: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Projects;
+}

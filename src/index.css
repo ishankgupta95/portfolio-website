@@ -151,6 +151,28 @@ button {
 
 .hero-title-container {
   margin-bottom: 1.5rem;
+  white-space: nowrap;
+}
+
+@keyframes letterWave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-0.3em); }
+}
+
+.hero-letter {
+  display: inline-block;
+}
+
+.hero-letter-gradient {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--text-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-title-container:hover .hero-letter {
+  animation: letterWave 0.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.05s);
 }
 
 .hero-title {
@@ -253,7 +275,7 @@ button {
 .skills-row {
   display: grid;
   grid-template-columns: 220px 1fr;
-  align-items: start;
+  align-items: center;
   padding: 3rem 0;
   border-top: 1px solid var(--border-color);
   gap: 4rem;
